@@ -5,8 +5,9 @@ on:
     paths:
       - 'lista.m3u'
       - '.github/workflows/sync-lista.yml'
-  schedule:
-    - cron: '*/5 * * * *'
+  workflow_run:
+    workflows: ["NOMBRE_DE_TU_OTRO_ACTION"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -20,6 +21,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     steps:
       - uses: actions/checkout@v4
 
@@ -56,5 +58,6 @@ jobs:
           git add -A
           if ! git diff --cached --quiet; then
             git commit -m "Sync copias de lista.m3u"
+            git pull --rebase origin main
             git push
           fi
