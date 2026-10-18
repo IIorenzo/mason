@@ -1,0 +1,32 @@
+name: Sincronizar Pastebin
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"   # cada 2 horas
+  workflow_dispatch:         # permite ejecutarlo a mano
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repo
+        uses: actions/checkout@v4
+
+      - name: Descargar pastebin
+        run: |
+          curl -fsSL -A "Mozilla/5.0" "https://pastebin.com/hV2z2e9g" -o lista.txt
+
+      - name: Commit si hay cambios
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add lista.txt
+            git commit -m "Actualización automática $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          else
+            echo "Sin cambios"
+          fi
