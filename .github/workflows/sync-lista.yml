@@ -5,22 +5,42 @@ on:
     paths:
       - 'lista.m3u'
       - '.github/workflows/sync-lista.yml'
+  schedule:
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: sync-lista
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
 
+      - name: Comprobar que existe lista.m3u
+        run: |
+          if [ ! -f lista.m3u ]; then
+            echo "ERROR: lista.m3u no existe en la raíz del repo"
+            exit 1
+          fi
+
       - name: Generar nombres (solo la primera vez)
         run: |
-          if [ ! -f .github/nombres.txt ]; then
-            tr -dc 'a-z0-9' < /dev/urandom | fold -w5 | head -n 400 | sort -u | head -n 200 > .github/nombres.txt
-          fi
+          python3 - <<'EOF'
+          import random, string, os
+          if not os.path.exists('.github/nombres.txt'):
+              nombres = set()
+              while len(nombres) < 200:
+                  nombres.add(''.join(random.choices(string.ascii_lowercase + string.digits, k=5)))
+              with open('.github/nombres.txt', 'w') as f:
+                  f.write('\n'.join(sorted(nombres)) + '\n')
+          EOF
 
       - name: Copiar lista.m3u a las 200 copias
         run: |
