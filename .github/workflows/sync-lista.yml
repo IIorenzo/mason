@@ -1,0 +1,40 @@
+name: Sync lista.m3u
+
+on:
+  push:
+    paths:
+      - 'lista.m3u'
+      - '.github/workflows/sync-lista.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generar nombres (solo la primera vez)
+        run: |
+          if [ ! -f .github/nombres.txt ]; then
+            tr -dc 'a-z0-9' < /dev/urandom | fold -w5 | head -n 400 | sort -u | head -n 200 > .github/nombres.txt
+          fi
+
+      - name: Copiar lista.m3u a las 200 copias
+        run: |
+          mkdir -p copias
+          while read -r n; do
+            cp lista.m3u "copias/$n.m3u"
+          done < .github/nombres.txt
+
+      - name: Commit y push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Sync copias de lista.m3u"
+            git push
+          fi
