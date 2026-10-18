@@ -1,3 +1,20 @@
+name: Sincronizar Pastebin
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repo
+        uses: actions/checkout@v4
+
       - name: Descargar pastebin
         run: |
           curl -fsSL -A "Mozilla/5.0" "https://pastebin.com/raw/AbCdEf12" -o /tmp/original.m3u
