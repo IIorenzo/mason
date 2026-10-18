@@ -17,7 +17,7 @@ jobs:
 
       - name: Descargar pastebin
         run: |
-          curl -fsSL -A "Mozilla/5.0" "https://pastebin.com/hV2z2e9g" -o lista.txt
+          curl -fsSL -A "Mozilla/5.0" "https://pastebin.com/raw/hV2z2e9g" -o lista.txt
 
       - name: Commit si hay cambios
         run: |
