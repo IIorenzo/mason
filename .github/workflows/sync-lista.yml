@@ -1,6 +1,8 @@
 name: Sync lista.m3u
 
 on:
+  schedule:
+    - cron: '0 */2 * * *'   # cada 2 horas (UTC)
   push:
     paths:
       - 'lista.m3u'
