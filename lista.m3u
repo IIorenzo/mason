@@ -279,3 +279,147 @@ http://vfpc.gb.vodafone.es/sdash/LIVE$CUP037/2.mpd/Manifest.mpd?start=LIVE&end=E
 https://ac-003.live.p7s1video.net/63f8995e/t_003/dazn-fast-hd/cenc-default.mpd
 #EXTINF:-1 tvg-id="DE | DAZN COMBAT" tvg-logo="" group-title="DAZN",DAZN COMBAT
 https://dazn-combat-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-dazn-combat-rakuten/CDN/master.m3u8
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/q994m1myq9ps1dyhicv16xn9m_image-header_pEs_1723118324000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",DAZN LALIGA
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=b920a58b15d65ab9a27316e85c747138:ec59ac08a32fcec4f8c075ca221ce22a
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-224/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/g4xuuh9i2y2b13yamobxm8men_image-header_pEs_1723035920000/fill/none/top/none/85/334/187/webp/image" group-logo="https://queensberry.co.uk/cdn/shop/files/DAZN_2_1_f22e8300-8d87-46ff-805a-a06a9ea6c7fc.png" group-title="DAZN HLS",DAZN 1
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=a55a7dfd59cb534992d19aa8e66e0ab9:c10a80c5e369338af6819bd9bd77399e
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-218/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/7kz6de1zs0wq13yx0rdsszp4t_image-header_pEs_1723118632000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",DAZN 2
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=77f46b0cecfa5d3e930b6b679899372b:30152efcbbfb69f661c8432dcb3da165
+https://dcs-ac-live.cdn.indazn.com/hls/dazn-linear-219/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/ng4ei1s4tvvk182ndxjeaj08p_image-header_pEs_1723117975000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",DAZN F1
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=703c762f6845501aa67d5260aeb33585:62a0e03b280bc0092283558510a3f6b4
+https://dcs-fs-live-dazn-cdn.dazn.com/hls/dazn-linear-201/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/1o8qrrfzjsf0r1gh6jmd74rbi2_image-header_pEs_1704473541000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",HYPERMOTION
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=51f285cf1297595b9b4203f231bf676c:4855f089fdfa4a733e9ee47fe9bee399
+https://dcs-fs-live-dazn-cdn.dazn.com/hls/dazn-linear-221/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/1kaqhtrr0kcl11563aff0431p8_image-header_pEs_1661945507000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",Eurosport 1
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=c1adb1748b73559d9c3641d200f29ad1:6dbc885222db0ec39f969ff9f70af4a6
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-213/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/1ga4f7hq0t8lu19ptfdbnne7v0_image-header_pEs_1661945507000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",Eurosport 2
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=2318d90a05375833a1168f315dd18b07:808154091db21ad932fbbc3bce646c0e
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-214/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/11cfwz95fsl161bmgx3yuk3z2e_image-header_pEs_1711624423000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",NFL Network
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=d91b5dc41ef85a25883ca47efb3c6641:5fa7e0ff1e379a83e44005917e3af5f2
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-205/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/1uwq82jpc6ai618kxcuq03qfjp_image-header_pEs_1733825595000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",Rally TV
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=1fdaf490829b5a0e96cd54012a00e3e9:b5ed8b50db846bc0609734146eef797b
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-220/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/1drhnrh91tkv1fwzqxaj1tbrc_image-header_pEs_1723124640000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",Red Bull TV
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=5912d48e2b915caf9ae5ab0c3df9aae1:7b8a244c697735202591656b052eafba
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-217/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v4/eu/none/1ih4or13ou3x41uwy4lhaa2mtf_image-header_pEs_1778755577000/fill/center/center/none/80/1600/900/webp/image" group-title="DAZN HLS",1 FEDERACION
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=8ab47741930c476780515f9a00decb0a:7ab4b9ae5a48aa526e511a913b832769
+https://dcj-ak-livedazn.akamaized.net/hls/dazn-linear-542/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/g4xuuh9i2y2b13yamobxm8men_image-header_pEs_1723035920000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",DAZN 1 DE
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=724c0979827650658dcd06df41f9c18d:e95737ed07c9e6428bb33b85986fef27
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-202/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/7kz6de1zs0wq13yx0rdsszp4t_image-header_pEs_1723118632000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",DAZN 2 DE
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=1739545b9be8552db3a42b0482d60482:9c63cdd24f1f8c420d0ac89a04a4524c
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-203/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/15j00hgsf1ioo17d1fl8wc69jb_image-header_pRow_1730196750000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",DAZN 1 PT
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=1da827896a8757a8b30b23f452b65b75:c676fa78dc5151b8a136f991409ca755
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-234/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/yhoot1zy31gt13i1wkgl4cvxw_image-header_pRow_1730196778000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",DAZN 2 PT
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=a193794bf1395e04a64f0cdcb48c0bd6:b1d3a81d3c8003a43cc97b9876654f09
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-235/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/mbe2u8k3c1yl1atl7p40rb76l_image-header_pRow_1730196810000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",DAZN 3 PT
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=3fca0ad3536d5480bc4c4d2f8fb3f96f:8d55aea55cdbd8e9dcedbbfd235f613e
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-236/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/4wp5kczgbvi71dbl6rfj1pmyh_image-header_pRow_1730196843000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",DAZN 4 PT
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=58d6fc271b9a5907a7fc45a8f5d7cfb5:e1ac6cf2c20cf7119233447e21de3da1
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-237/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/eu/none/1anwtxog0d0h51nubkd9lacqnu_image-header_pRow_1730196870000/fill/none/top/none/85/334/187/webp/image" group-title="DAZN HLS",DAZN 5 PT
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=8d77a85547f159f184fb4ec5005100b8:dcfdfbbc28e8d175103a2cab65365538
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-238/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/linear-channel/none/Logo_LTV_Eurosport_1/contain/center/center/none/85/334/187/webp/image" group-title="DAZN HLS",Eurosport 1 IT
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=5b95fea44d1458128174961a2f43244c:8eac54008e5cb7e3751156ad53ca5625
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-211/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/linear-channel/none/Logo_LTV_Eurosport_2/contain/center/center/none/85/334/187/webp/image" group-title="DAZN HLS",Eurosport 2 IT
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=316b4d8767e45e64ad8ba429dca07518:ae0f31d94668346ca4981930fb8ddfc7
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-212/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/linear-channel/none/Logo_LTV_Eurosport_3/contain/center/center/none/85/334/187/webp/image" group-title="DAZN HLS",Eurosport 3 IT
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=ea97375d4da251259b0fdf59d49209bc:cf02db0cd045fc07febc4a65de0b5ec4
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-231/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/linear-channel/none/Logo_LTV_Eurosport_4/contain/center/center/none/85/334/187/webp/image" group-title="DAZN HLS",Eurosport 4 IT
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=d3d146e98d15516cafadf9eb3403dc26:26a6690fbed68ef1de6fa188dccdd144
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-232/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/linear-channel/none/Logo_LTV_Eurosport_5/contain/center/center/none/85/334/187/webp/image" group-title="DAZN HLS",Eurosport 5 IT
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=54af840917185951979f2c7063f820e3:3ecf8a29acdcd597559c89dcc5c7d689
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-233/stream.m3u8?p=tv
+#EXTINF:-1 tvg-logo="https://image.discovery.indazn.com/eu/v3/linear-channel/none/Logo_LTV_Eurosport_6/contain/center/center/none/85/334/187/webp/image" group-title="DAZN HLS",Eurosport 6 IT
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=AppleCoreMedia
+#KODIPROP:inputstream.adaptive.license_type=fairplay
+#KODIPROP:inputstream.adaptive.license_key=f7299fc3eeec54e786c1c2e143c04585:1b2731ac7c25ecd07b5c3676d16f1532
+https://dct-ac-live.cdn.indazn.com/hls/dazn-linear-239/stream.m3u8?p=tv
