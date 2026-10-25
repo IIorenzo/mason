@@ -6,6 +6,7 @@ on:
   push:
     paths:
       - '.github/workflows/sync-lista.yml'
+      - 'filtrar.py'
   workflow_dispatch:
 
 permissions:
@@ -26,21 +27,25 @@ jobs:
         run: |
           curl -fsSL --retry 3 --retry-delay 5 \
             -A "Mozilla/5.0 (X11; Linux x86_64)" \
-            "https://pastebin.com/raw/hV2z2e9g" -o lista_nueva.tmp
+            "https://pastebin.com/raw/hV2z2e9g" -o /tmp/original.m3u
 
-          # Si la descarga viene vacía, abortar sin tocar lo que ya hay
-          if [ ! -s lista_nueva.tmp ]; then
-            echo "ERROR: la descarga está vacía"
-            exit 1
+          if [ ! -s /tmp/original.m3u ]; then
+            echo "::error::La descarga está vacía"; exit 1
           fi
+          grep -q "#EXTM3U" /tmp/original.m3u || { echo "::error::No es una lista M3U"; exit 1; }
+          sed -i 's/\r$//' /tmp/original.m3u
 
-          # Normalizar saltos de línea (Windows -> Unix)
-          sed -i 's/\r$//' lista_nueva.tmp
-          mv lista_nueva.tmp lista.m3u
+          echo "Grupos encontrados en el original:"
+          grep -o 'group-title="[^"]*"' /tmp/original.m3u | sort | uniq -c | sort -rn
 
-      # Descomenta si filtrar.py debe procesar la lista antes de copiarla
-      # - name: Filtrar lista
-      #   run: python3 filtrar.py
+      - name: Filtrar categorías
+        run: |
+          python3 filtrar.py /tmp/original.m3u /tmp/filtrada.m3u
+          N=$(grep -c '^#EXTINF' /tmp/filtrada.m3u || true)
+          if [ "$N" -eq 0 ]; then
+            echo "::error::El filtro dejó 0 canales, no toco lista.m3u"; exit 1
+          fi
+          mv /tmp/filtrada.m3u lista.m3u
 
       - name: Generar nombres (solo la primera vez)
         run: |
@@ -64,10 +69,12 @@ jobs:
       - name: Commit y push
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Sync copias de lista.m3u"
+            git commit -m "Sync lista filtrada $(date -u +'%Y-%m-%d %H:%M UTC')"
             git pull --rebase origin main
             git push
+          else
+            echo "Sin cambios"
           fi
