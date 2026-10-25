@@ -1,6 +1,8 @@
 import sys
 
 CATEGORIAS = {
+    "Movistar Deportes Fairplay",
+    "dazn hls",
     "movistar deportes playready",
     "dazn",
 }
