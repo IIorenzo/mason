@@ -5,11 +5,7 @@ on:
     - cron: '0 */2 * * *'   # cada 2 horas (UTC)
   push:
     paths:
-      - 'lista.m3u'
       - '.github/workflows/sync-lista.yml'
-  workflow_run:
-    workflows: ["NOMBRE_DE_TU_OTRO_ACTION"]
-    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -23,16 +19,28 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     steps:
       - uses: actions/checkout@v4
 
-      - name: Comprobar que existe lista.m3u
+      - name: Descargar lista original de Pastebin
         run: |
-          if [ ! -f lista.m3u ]; then
-            echo "ERROR: lista.m3u no existe en la raíz del repo"
+          curl -fsSL --retry 3 --retry-delay 5 \
+            -A "Mozilla/5.0 (X11; Linux x86_64)" \
+            "https://pastebin.com/raw/hV2z2e9g" -o lista_nueva.tmp
+
+          # Si la descarga viene vacía, abortar sin tocar lo que ya hay
+          if [ ! -s lista_nueva.tmp ]; then
+            echo "ERROR: la descarga está vacía"
             exit 1
           fi
+
+          # Normalizar saltos de línea (Windows -> Unix)
+          sed -i 's/\r$//' lista_nueva.tmp
+          mv lista_nueva.tmp lista.m3u
+
+      # Descomenta si filtrar.py debe procesar la lista antes de copiarla
+      # - name: Filtrar lista
+      #   run: python3 filtrar.py
 
       - name: Generar nombres (solo la primera vez)
         run: |
